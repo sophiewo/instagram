@@ -2,6 +2,22 @@
 <html>
   <head>
   <title>Instagram</title>
+
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://www.instagram.com/sophiegw_/">
+      <img src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300" width="28" height="28">
+      Tinstagram 
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,8 +26,12 @@
 
   <body>
   <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
+  <p class="alert"><%= alert %></p><body>
+  <section class="section">
+    <div class="content">
+      <%= yield %>
+    </div>
+  </section>
+</body>
 
 </html>
