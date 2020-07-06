@@ -7,8 +7,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#bulma
+gem 'bulma-rails', '~> 0.9.0'
+
+#devise
 gem 'devise'
 
+#rubocop
 gem 'rubocop', '0.79.0', require: false
 gem 'rubocop-rails'
 

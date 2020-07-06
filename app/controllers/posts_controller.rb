@@ -6,26 +6,23 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post_this = Post.new
   end
 
   def create
-    @post = Post.new
-  end
-
-  def create
-    @post = Post.new(post_params)
-
-    if @post.save
-      redirect_to @post
+    @post_this = Post.new(params.require(:post).permit(:title))
+    if
+    @post_this.save
+    redirect_to @post_this
     else
-      render 'new'
+      render new
     end 
   end
 
   private
 
-  def posts_params
-    params.require(:post).permit(:title, :content)
+  def post_params
+    params.require(:post).permit(:title)
   end
 
 end

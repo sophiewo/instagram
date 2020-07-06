@@ -1,1 +1,17 @@
 <h1 class="title">Posts</h1>
+
+<div class="section">
+ <div class="field">
+    <div class="control">
+  <%= form_for @post_this do |post_form| %>
+    Title: <%= post_form.text_field :title %>
+    <%# Caption: <%= post_form.text_field :caption %>
+    <%# Upload Image: <%= post_form.image :picture %>
+
+    <%= post_form.submit %>
+    </div>
+  </div>
+</div>
+
+<% end %>
+
